@@ -9,12 +9,12 @@
   <artifactId>inventory</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <!-- ✅ Make sure this parent section is present -->
+  <!-- ✅ Spring Boot Parent for dependency & plugin management -->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.2.5</version> <!-- You can use 3.1.x or 3.2.x -->
-    <relativePath/> <!-- lookup parent from repository -->
+    <version>3.2.5</version>
+    <relativePath/>
   </parent>
 
   <properties>
@@ -39,6 +39,21 @@
 
   <build>
     <plugins>
+      <!-- ✅ Spring Boot plugin to build executable JAR -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.2.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- ✅ Compiler plugin to set Java version -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -50,4 +65,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
