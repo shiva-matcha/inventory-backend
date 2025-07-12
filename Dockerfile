@@ -1,17 +1,24 @@
-# Use OpenJDK 17 as base image
-FROM openjdk:17-jdk-slim
+# Use OpenJDK base image
+FROM maven:3.9.5-eclipse-temurin-17 AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy Maven wrapper and project files
+# Copy source code
 COPY . .
 
-# Package the Spring Boot app
-RUN ./mvnw clean package -DskipTests
+# Build app
+RUN mvn clean package -DskipTests
 
-# Expose port 8080
+# Use a slim JDK image for running
+FROM eclipse-temurin:17-jdk-alpine
+
+WORKDIR /app
+
+# Copy built JAR from the previous stage
+COPY --from=build /app/target/inventory-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose Spring Boot default port
 EXPOSE 8080
 
 # Run the app
-CMD ["java", "-jar", "target/inventory-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
