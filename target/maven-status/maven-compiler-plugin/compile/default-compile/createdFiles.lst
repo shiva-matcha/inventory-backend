@@ -1,4 +1,11 @@
+com\example\inventory\model\StockTransaction.class
+com\example\inventory\model\TransactionType.class
+com\example\inventory\service\StockTransactionService.class
+com\example\inventory\service\EmailService.class
+com\example\inventory\controller\StockTransactionController.class
 com\example\inventory\controller\ProductController.class
 com\example\inventory\InventoryApplication.class
-com\example\inventory\model\Product.class
 com\example\inventory\repository\ProductRepository.class
+com\example\inventory\repository\StockTransactionRepository.class
+com\example\inventory\model\Product.class
+com\example\inventory\controller\Sample.class

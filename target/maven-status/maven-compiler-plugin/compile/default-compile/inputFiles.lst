@@ -1,4 +1,11 @@
 C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\InventoryApplication.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\controller\StockTransactionController.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\service\StockTransactionService.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\service\EmailService.java
 C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\controller\ProductController.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\model\StockTransaction.java
 C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\model\Product.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\model\TransactionType.java
 C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\repository\ProductRepository.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\repository\StockTransactionRepository.java
+C:\smart-inventory-fullstack\inventory-backend\src\main\java\com\example\inventory\controller\Sample.java

@@ -14,6 +14,7 @@ public class ProductController {
     private final ProductRepository repo;
 
     public ProductController(ProductRepository repo) {
+
         this.repo = repo;
     }
 
@@ -37,4 +38,12 @@ public class ProductController {
     public void delete(@PathVariable Long id) {
         repo.deleteById(id);
     }
+
+    // ⚠️ New Endpoint for Low Stock Products
+    @GetMapping("/low-stock")
+    public List<Product> getLowStockProducts() {
+        //int threshold = 3; // You can make this configurable later
+        return repo.findByQuantityLessThan(5);
+    }
+
 }
